@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CD catalog</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/toastr.min.css" rel="stylesheet">
+
+    <link href="../img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div id="mainDiv">
+    <div id="secondDiv">
+        <div id="tableCD">&nbsp;</div>
+
+        <div class="footer">
+            <div class="text-center">
+                <button class="btn" id="first" onclick="firstPageClick()">First</button>
+                <button class="btn" id="previous" onclick="previousPageClick()">Previous</button>
+                <button class="btn" id="next" onclick="nextPageClick()">Next</button>
+                <button class="btn" id="last" onclick="lastPageClick()">Last</button>
+            </div>
+        </div>
+
+        <div>
+            <div id="leftBottomLink">
+                <button type="button" class="btn btn-link" onclick="redirectToCreateDiscPage()">
+                    Create a new disc
+                </button>
+            </div>
+            <div id="rightBottomLink">
+                <button type="button" class="btn btn-link" onclick="redirectToDownloadFilePage()">
+                    Download the catalog
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../js/index.js"></script>
+<script src="../js/jquery-2.1.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/toastr.min.js"></script>
+
+</body>
+</html>

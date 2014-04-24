@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CD catalog</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/toastr.min.css" rel="stylesheet">
+
+    <link href="../img/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+<div id="mainDiv">
+    <div id="secondDiv">
+        <div id="tableCD">&nbsp;</div>
+        <button type="button" class="btn btn-default btn-lg btn-block"
+                onclick="downloadCatalog()">Download the file</button>
+        <br/><br/><br/>
+
+        <div>
+            <div id="leftBottomLink">
+                <button type="button" class="btn btn-link" onclick="redirectToShowAllPage()">
+                    Show all discs
+                </button>
+            </div>
+            <div id="rightBottomLink">
+                <button type="button" class="btn btn-link" onclick="redirectToCreateDiscPage()">
+                    Create a new disc
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="../js/index.js"></script>
+<script src="../js/jquery-2.1.0.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/toastr.min.js"></script>
+</body>
+</html>

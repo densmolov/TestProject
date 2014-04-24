@@ -1,0 +1,7 @@
+com\dsmolov\dao\SimpleDaoImpl.class
+com\dsmolov\services\SimpleServiceImpl.class
+com\dsmolov\entity\CdDisc.class
+com\dsmolov\dao\SimpleDao.class
+com\dsmolov\controller\SimpleController.class
+com\dsmolov\services\SimpleService.class
+com\dsmolov\entity\XmlProcessor.class

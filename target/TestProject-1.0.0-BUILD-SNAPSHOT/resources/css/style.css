@@ -1,0 +1,22 @@
+body {
+	font-family: Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+#mainDiv {
+	width: 100%;
+}
+
+#secondDiv {
+	width: 40%;
+	margin: 80px auto 80px auto;
+}
+
+#leftBottomLink {
+    float: left;
+    text-align: left;
+}
+
+#rightBottomLink {
+    float: right;
+    text-align: right;
+}
