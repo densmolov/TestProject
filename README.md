@@ -10,14 +10,4 @@ TestProject
 5.	Страница для отображения данных (таблица данных должна быть разбита по страницам) – AJAX-запрос тянет максимум 5 записей из XML файла, как это было бы, например, при наличии ORM Hibernate и базы данных.
 6.	Страница со ссылкой для доунлоада объединенного XML файла – у пользователя есть возможность сохранить объединенный XML файл на свой компьютер.
 7.	Технологии:
-JAVA EE7
-Spring MVC
-Tomcat 7
-Maven
-JQuery + AJAX
-Toastr.js
-jquery.validationEngine
-HTML5
-CSS
-Tweeter Bootstrap
-Git
+JAVA EE7, Spring MVC, Tomcat 7, Maven, JQuery + AJAX, Toastr.js, jquery.validationEngine, HTML5, CSS, Tweeter Bootstrap, Git.
