@@ -50,24 +50,24 @@ function redirectToShowAllPage() {
 
 function nextPageClick() {
     pageNumber++;
-    ajaxCallTable();
+    renderTheTable();
 }
 
 function previousPageClick() {
     if (pageNumber > 1) {
         pageNumber--;
     }
-    ajaxCallTable();
+    renderTheTable();
 }
 
 function firstPageClick() {
     pageNumber = 1;
-    ajaxCallTable();
+    renderTheTable();
 }
 
 function lastPageClick() {
     pageNumber = totalPages;
-    ajaxCallTable();
+    renderTheTable();
 }
 
 function ajaxCallTable() {
@@ -80,14 +80,14 @@ function ajaxCallTable() {
     }
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            renderTheTable(xmlhttp.responseText);
+            makeTheTable(xmlhttp.responseText);
         }
     };
-    xmlhttp.open("GET", "/showData" + '?' + $.param({pageNumber: this.pageNumber}), true);
+    xmlhttp.open("GET", "/showData" + '?' + $.param({pageNumber: this.pageNumber}), false);
     xmlhttp.send();
 }
 
-function renderTheTable(incomingString) {
+function makeTheTable(incomingString) {
     console.log("incomingString = " + incomingString);
     var parser = new DOMParser();
     var xmlDoc = parser.parseFromString(incomingString, "text/xml");
@@ -114,6 +114,21 @@ function renderTheTable(incomingString) {
     }
     str += "</tbody></table>";
     $("#tableCdDiv").html(str);
+}
+
+function renderTheTable() {
+    $.ajax({
+        type: "GET",
+        url: "/showData" + '?' + $.param({pageNumber: this.pageNumber}),
+        async: false,
+        headers: {
+            Accept: "text/plain; charset=UTF-8",
+            "Content-Type": "text/plain; charset=UTF-8"
+        },
+        success: function (incomingString) {
+            makeTheTable(incomingString);
+        }
+    })
 }
 
 function updatePaging() {
